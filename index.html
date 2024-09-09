@@ -68,57 +68,50 @@
         }
 
         .carousel-slider img {
-            width: 90%;
+            width: 90%; /* Imagem central ocupando 90% da largura */
             height: auto;
             border-radius: 5px;
-            transition: transform 0.5s ease, opacity 0.5s ease;
+            transition: transform 0.5s ease, opacity 0.5s ease; /* Transição suave para o zoom */
         }
 
-        .slick-center img {
-            transform: scale(1.1);
-            z-index: 2;
-        }
-
-        .slick-slide {
-            opacity: 0.5;
-            transform: scale(0.8);
-            transition: transform 0.5s ease, opacity 0.5s ease;
-        }
-
-        .slick-center {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .slick-prev:before,
-        .slick-next:before {
-            color: #56b870;
-        }
-
-        .slick-dots li button:before {
-            color: #56b870;
-        }
-
-        .slick-dots li.slick-active button:before {
-            opacity: 1;
-            color: #fff;
-        }
-
-        /* Accordion */
-        .accordion h3 {
+        /* Tooltip */
+        .tooltip-container {
+            position: relative;
+            display: inline-block;
             cursor: pointer;
-            background-color: #56b870;
-            padding: 15px;
-            margin: 5px 0;
-            color: white;
-            border-radius: 5px;
         }
 
-        .accordion-content {
-            display: none;
-            background-color: #101f2d;
+        .tooltip-container .tooltip-text {
+            visibility: hidden;
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
             padding: 10px;
-            border-left: 3px solid #56b870;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Posiciona acima do elemento */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip-container .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%; /* Ponta da seta para baixo */
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+        .tooltip-container:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
         }
 
         /* Botão Fixo do WhatsApp */
@@ -188,46 +181,31 @@
         </div>
     </header>
 
-    <!-- Carrossel de Microfones -->
+    <!-- Carrossel de Microfone Pro-X com Tooltip -->
     <section class="carousel">
         <div class="container">
-            <h2>Galeria de Microfones</h2>
-            <div class="carousel-slider pro-x">
-                <div><img src="midia/facial11.png" srcset="midia/facial11.png 400w, midia/facial11.png 800w" alt="Microfone Pro-X 1"></div>
-                <div><img src="midia/facial1.png" srcset="midia/facial1.png 400w, midia/facial1.png 800w" alt="Microfone Pro-X 2"></div>
-                <div><img src="midia/facial2.png" srcset="midia/facial2.png 400w, midia/facial2.png 800w" alt="Microfone Pro-X 3"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Accordion de Descrições -->
-    <section class="products">
-        <div class="container">
-            <h2>Microfones Profissionais</h2>
-
-            <div class="accordion">
-                <h3>MICROFONE SHURE DUPLO FACIAL GLXD4 AURICULAR</h3>
-                <div class="accordion-content">
-                    <p>Microfone de alta qualidade com dois transmissores para áudio perfeito em apresentações ao vivo e gravações profissionais.</p>
+            <h2>MICROFONE SHURE DUPLO FACIAL GLXD4 AURICULAR</h2>
+            <div class="carousel-slider">
+                <div class="tooltip-container">
+                    <img src="midia/facial11.png" alt="Microfone Pro-X 1">
+                    <div class="tooltip-text">Descrição do Microfone Pro-X 1</div>
                 </div>
-
-                <h3>MICROFONE PROFISSIONAL DUPLO SHURE BETA58 GLXD4</h3>
-                <div class="accordion-content">
-                    <p>Ideal para performances ao vivo, o Shure Beta58 oferece durabilidade e clareza de som excepcionais.</p>
+                <div class="tooltip-container">
+                    <img src="midia/facial1.png" alt="Microfone Pro-X 2">
+                    <div class="tooltip-text">Descrição do Microfone Pro-X 2</div>
                 </div>
-
-                <h3>Shure GLXD4 DUPLO Profissional</h3>
-                <div class="accordion-content">
-                    <p>Equipamento confiável para transmissões de áudio sem fio, proporcionando excelente alcance e qualidade sonora.</p>
-                </div>
-
-                <h3>MICROFONE PROFISSIONAL SENNHEISER DUPLO</h3>
-                <div class="accordion-content">
-                    <p>Sennheiser oferece precisão de som para uso profissional em qualquer ambiente de gravação ou apresentação.</p>
+                <div class="tooltip-container">
+                    <img src="midia/facial2.png" alt="Microfone Pro-X 3">
+                    <div class="tooltip-text">Descrição do Microfone Pro-X 3</div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Botão Fixo do WhatsApp -->
+    <a href="https://wa.me/5583987610128" class="whatsapp-float" target="_blank">
+        <img src="https://cdn.pixabay.com/photo/2015/08/03/13/58/whatsapp-873316_1280.png" alt="WhatsApp">
+    </a>
 
     <!-- Footer -->
     <footer>
@@ -238,38 +216,24 @@
         </div>
     </footer>
 
-    <!-- Botão Fixo do WhatsApp -->
-    <a href="https://wa.me/5583987610128" class="whatsapp-float" target="_blank">
-        <img src="https://cdn.pixabay.com/photo/2015/08/03/13/58/whatsapp-873316_1280.png" alt="WhatsApp">
-    </a>
-
     <!-- Script do jQuery e Slick Carousel -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
     <script>
-        // Inicializa o Slick Carousel
-        $('.carousel-slider').slick({
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            centerMode: true,
-            dots: true,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
-
-        // Função Accordion
-        document.querySelectorAll('.accordion h3').forEach(item => {
-            item.addEventListener('click', function() {
-                let content = this.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        $(document).ready(function(){
+            // Inicialização do carrossel
+            $('.carousel-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 600,
+                slidesToShow: 1,
+                centerMode: true,
+                variableWidth: true,
+                arrows: true,
+                adaptiveHeight: true,
+                focusOnSelect: true,
+                autoplay: false
             });
         });
     </script>

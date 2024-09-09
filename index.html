@@ -68,32 +68,31 @@
         }
 
         .carousel-slider img {
-            width: 90%; /* Imagem central ocupando 90% da largura */
+            width: 90%;
             height: auto;
             border-radius: 5px;
-            transition: transform 0.5s ease, opacity 0.5s ease; /* Transição suave para o zoom */
+            transition: transform 0.5s ease, opacity 0.5s ease;
         }
 
-        /* Zoom suave na imagem exibida */
         .slick-center img {
-            transform: scale(1.1); /* Zoom um pouco maior para o centro */
+            transform: scale(1.1);
             z-index: 2;
         }
 
         .slick-slide {
-            opacity: 0.5; /* Imagens não centrais são menos opacas */
-            transform: scale(0.8); /* Imagens laterais são menores */
-            transition: transform 0.5s ease, opacity 0.5s ease; /* Transição suave */
+            opacity: 0.5;
+            transform: scale(0.8);
+            transition: transform 0.5s ease, opacity 0.5s ease;
         }
 
         .slick-center {
-            opacity: 1; /* Imagem central com opacidade completa */
-            transform: scale(1); /* Imagem central maior */
+            opacity: 1;
+            transform: scale(1);
         }
 
         .slick-prev:before,
         .slick-next:before {
-            color: #56b870; /* Verde escuro */
+            color: #56b870;
         }
 
         .slick-dots li button:before {
@@ -103,6 +102,23 @@
         .slick-dots li.slick-active button:before {
             opacity: 1;
             color: #fff;
+        }
+
+        /* Accordion */
+        .accordion h3 {
+            cursor: pointer;
+            background-color: #56b870;
+            padding: 15px;
+            margin: 5px 0;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .accordion-content {
+            display: none;
+            background-color: #101f2d;
+            padding: 10px;
+            border-left: 3px solid #56b870;
         }
 
         /* Botão Fixo do WhatsApp */
@@ -172,10 +188,10 @@
         </div>
     </header>
 
-    <!-- Carrossel de Microfone Pro-X -->
+    <!-- Carrossel de Microfones -->
     <section class="carousel">
         <div class="container">
-            <h2>MICROFONE SHURE DUPLO FACIAL GLXD4 AURICULAR</h2>
+            <h2>Galeria de Microfones</h2>
             <div class="carousel-slider pro-x">
                 <div><img src="midia/facial11.png" srcset="midia/facial11.png 400w, midia/facial11.png 800w" alt="Microfone Pro-X 1"></div>
                 <div><img src="midia/facial1.png" srcset="midia/facial1.png 400w, midia/facial1.png 800w" alt="Microfone Pro-X 2"></div>
@@ -184,39 +200,31 @@
         </div>
     </section>
 
-    <!-- Carrossel de Microfone LiveMax -->
-    <section class="carousel">
+    <!-- Accordion de Descrições -->
+    <section class="products">
         <div class="container">
-            <h2>MICROFONE PROFISSIONAL DUPLO SHURE BETA58 GLXD4</h2>
-            <div class="carousel-slider live-max">
-                <div><img src="midia/img1.png" srcset="midia/img1.png 400w, midia/img1.png 800w" alt="Microfone LiveMax 1"></div>
-                <div><img src="midia/img2.png" srcset="midia/img2.png 400w, midia/img2.png 800w" alt="Microfone LiveMax 2"></div>
-                <div><img src="midia/img3.png" srcset="midia/img3.png 400w, midia/img3.png 800w" alt="Microfone LiveMax 3"></div>
-            </div>
-        </div>
-    </section>
+            <h2>Microfones Profissionais</h2>
 
-    <!-- Carrossel de Microfone StudioOne -->
-    <section class="carousel">
-        <div class="container">
-            <h2>Shure GLXD4 DUPLO Profissional</h2>
-            <div class="carousel-slider studio-one">
-                <div><img src="midia/plano1.png" srcset="midia/plano1.png 400w, midia/plano1.png 800w" alt="Microfone StudioOne 1"></div>
-                <div><img src="midia/plano2.png" srcset="midia/plano2.png 400w, midia/plano2.png 800w" alt="Microfone StudioOne 2"></div>
-                <div><img src="midia/plano3.png" srcset="midia/plano3.png 400w, midia/plano3.png 800w" alt="Microfone StudioOne 3"></div>
-                
-            </div>
-        </div>
-    </section>
+            <div class="accordion">
+                <h3>MICROFONE SHURE DUPLO FACIAL GLXD4 AURICULAR</h3>
+                <div class="accordion-content">
+                    <p>Microfone de alta qualidade com dois transmissores para áudio perfeito em apresentações ao vivo e gravações profissionais.</p>
+                </div>
 
-    <!-- Carrossel de Microfone PowerVoice -->
-    <section class="carousel">
-        <div class="container">
-            <h2>MICROFONE PROFISSIONAL SENNHEISER DUPLO</h2>
-            <div class="carousel-slider power-voice">
-                <div><img src="midia/sennheiser1.png" srcset="midia/sennheiser1.png 400w, midia/sennheiser1.png 800w" alt="Microfone PowerVoice 1"></div>
-                <div><img src="midia/sennheiser2.png" srcset="midia/sennheiser2.png 400w, midia/sennheiser2.png 800w" alt="Microfone PowerVoice 2"></div>
-                <div><img src="midia/sennheiser3.png" srcset="midia/sennheiser3.png 400w, midia/sennheiser3.png 800w" alt="Microfone PowerVoice 3"></div>
+                <h3>MICROFONE PROFISSIONAL DUPLO SHURE BETA58 GLXD4</h3>
+                <div class="accordion-content">
+                    <p>Ideal para performances ao vivo, o Shure Beta58 oferece durabilidade e clareza de som excepcionais.</p>
+                </div>
+
+                <h3>Shure GLXD4 DUPLO Profissional</h3>
+                <div class="accordion-content">
+                    <p>Equipamento confiável para transmissões de áudio sem fio, proporcionando excelente alcance e qualidade sonora.</p>
+                </div>
+
+                <h3>MICROFONE PROFISSIONAL SENNHEISER DUPLO</h3>
+                <div class="accordion-content">
+                    <p>Sennheiser oferece precisão de som para uso profissional em qualquer ambiente de gravação ou apresentação.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -240,19 +248,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
     <script>
-        $(document).ready(function(){
-            // Inicialização do carrossel para cada modelo de microfone
-            $('.pro-x, .live-max, .studio-one, .power-voice').slick({
-                dots: true,
-                infinite: true,
-                speed: 600,
-                slidesToShow: 1,
-                centerMode: true,
-                variableWidth: true,
-                arrows: true,
-                adaptiveHeight: true,
-                focusOnSelect: true,
-                autoplay: false
+        // Inicializa o Slick Carousel
+        $('.carousel-slider').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode: true,
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
+        // Função Accordion
+        document.querySelectorAll('.accordion h3').forEach(item => {
+            item.addEventListener('click', function() {
+                let content = this.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
             });
         });
     </script>
